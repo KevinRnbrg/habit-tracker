@@ -60,8 +60,13 @@
     const loadData = () => {
       const savedData = JSON.parse(localStorage.getItem('habits_data'));
       if (savedData) habitData.value = savedData;
+      updateHabitChecked();
       calculateProgress();
+    }
+    
+    onMounted(loadData);
 
+    const updateHabitChecked = () => { // add mocha testing
       const currentTime = new Date(); // 2024, 4, 13
 
       for (let habit of habitData.value) {
@@ -87,8 +92,6 @@
         }
       }
     }
-    
-    onMounted(loadData);
 
     const filterAndCount = (occurrence) => habitData.value.filter(obj => obj.occurrence === occurrence && obj.checked === true).length;
 
