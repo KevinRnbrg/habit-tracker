@@ -7,6 +7,9 @@
             <v-icon v-if="(maxProgress / progress) === 1" size="26">mdi-check-circle</v-icon>
             <v-icon v-else size="26">mdi-check-circle-outline</v-icon>
           </div>
+          <div>
+            hello
+          </div>
         </template>
         <v-card-text class="bg-surface-light pt-4">
           <v-progress-linear 

@@ -53,7 +53,7 @@
 
 <style scoped>
     .navigation-link {
-        color: white;
+        color: red;
         text-decoration: none;
     }
 
